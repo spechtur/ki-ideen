@@ -28,58 +28,34 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 1.6;
-      color: #333333;
-      background: #ffffff;
+      color: #2e2e2e;
+      background: #f0f0ee;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    /* ── Akzentbalken ── */
-    .gelb-bar {
-      height: 5px;
-      background: var(--phgr-gelb);
-      flex-shrink: 0;
-    }
+    .gelb-bar      { height: 5px; background: var(--phgr-gelb); flex-shrink: 0; }
+    .gelb-bar-thin { height: 3px; background: var(--phgr-gelb); }
 
     /* ── Header ── */
     header {
       background: #2e2e2e;
-      padding: 20px 32px 18px;
+      padding: 18px 40px 16px;
       display: flex;
-      align-items: flex-start;
-      gap: 28px;
+      align-items: center;
+      gap: 32px;
       justify-content: space-between;
       flex-wrap: wrap;
     }
-
-    .phgr-logo {
-      font-size: 24px;
-      line-height: 1;
-      white-space: nowrap;
-      flex-shrink: 0;
-      padding-top: 3px;
-    }
-    .phgr-logo .ph {
-      font-family: 'Lora', 'DejaVu Serif', Georgia, serif;
-      font-style: italic;
-      font-weight: 500;
-      color: var(--phgr-gelb);
-    }
-    .phgr-logo .gr {
-      font-family: 'Source Sans 3', sans-serif;
-      font-variant: small-caps;
-      font-weight: 300;
-      color: #ffffff;
-      letter-spacing: 2px;
-    }
-
+    .phgr-logo { font-size: 24px; line-height: 1; white-space: nowrap; flex-shrink: 0; }
+    .phgr-logo .ph { font-family: 'Lora', Georgia, serif; font-style: italic; font-weight: 500; color: var(--phgr-gelb); }
+    .phgr-logo .gr { font-family: 'Source Sans 3', sans-serif; font-variant: small-caps; font-weight: 300; color: #fff; letter-spacing: 2px; }
     .header-text h1 {
-      font-family: 'Source Sans 3', sans-serif;
       font-variant: small-caps;
       font-weight: 600;
       font-size: 1.55rem;
-      color: #ffffff;
+      color: #fff;
       letter-spacing: 0.5px;
       text-decoration: underline;
       text-decoration-color: var(--phgr-gelb);
@@ -88,217 +64,227 @@
     .header-text .subtitle {
       font-family: 'Lora', Georgia, serif;
       font-style: italic;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--phgr-mittelgrau);
-      margin-top: 4px;
+      margin-top: 3px;
     }
 
     /* ── Tab-Navigation ── */
-    .tab-nav {
+    .tab-nav-wrapper {
+      background: #fff;
+      padding: 16px 40px;
       display: flex;
-      padding: 0 32px;
-      border-bottom: 2px solid var(--phgr-hellgrau);
-      background: #ffffff;
-      flex-shrink: 0;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
     }
     .tab-btn {
-      padding: 13px 22px 11px;
-      border: none;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -2px;
-      background: transparent;
+      padding: 9px 22px;
+      border-radius: 20px;
+      border: 1.5px solid #ddd;
+      background: #fff;
       font-family: 'Source Sans 3', sans-serif;
       font-variant: small-caps;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 600;
       letter-spacing: 0.3px;
-      color: var(--phgr-dunkelgrau);
+      color: #777;
       cursor: pointer;
-      transition: color 0.15s, border-color 0.15s;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
     }
-    .tab-btn.active {
-      color: #333333;
-      border-bottom-color: var(--phgr-gelb);
-    }
-    .tab-btn:hover:not(.active) { color: #444; }
+    .tab-btn:hover:not(.active) { border-color: #aaa; color: #333; background: #f8f8f6; }
+    .tab-btn.active { background: var(--phgr-gelb); border-color: var(--phgr-gelb); color: #2e2e2e; }
 
     /* ── Inhalt ── */
-    main {
-      padding: 28px 32px 44px;
-      flex: 1;
-    }
-
+    main { flex: 1; padding: 32px 40px 52px; }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
 
-    /* ── Kategorie-Karten ── */
+    /* ── Kategorie-Kacheln ── */
     .cat-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
     }
-
     .cat-card {
-      border: 1px solid var(--phgr-hellgrau);
+      background: #fff;
+      border: 1px solid #e4e4e2;
       border-top: 4px solid var(--card-color, #878787);
-      border-radius: 3px;
-      padding: 15px 15px 13px;
-      background: #ffffff;
+      border-radius: 10px;
+      padding: 22px 20px 18px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
     }
-
     .cat-title {
-      font-size: 0.82rem;
+      font-size: 0.92rem;
       font-weight: 600;
       font-variant: small-caps;
       letter-spacing: 0.3px;
       color: var(--card-color, #878787);
-      margin-bottom: 9px;
+      margin-bottom: 13px;
     }
-
     .chip {
       display: block;
-      font-size: 0.76rem;
-      padding: 3px 8px;
-      border-radius: 2px;
-      margin: 3px 0;
-      line-height: 1.45;
+      font-size: 0.85rem;
+      padding: 5px 11px;
+      border-radius: 5px;
+      margin: 4px 0;
+      line-height: 1.4;
       background: var(--chip-bg, #ececec);
-      color: var(--chip-text, #444444);
+      color: var(--chip-text, #444);
     }
-    .chip.star {
-      font-weight: 600;
-      background: var(--chip-star-bg, #d8d8d8);
-    }
-
-    .taetigkeiten-legend {
-      margin-top: 13px;
-      font-size: 0.76rem;
-      color: var(--phgr-dunkelgrau);
-    }
+    .chip.star { font-weight: 600; background: var(--chip-star-bg, #d8d8d8); }
+    .panel-legend { margin-top: 18px; font-size: 0.78rem; color: var(--phgr-dunkelgrau); }
 
     /* ── Matrix ── */
-    .matrix-intro {
+    .panel-intro {
       font-family: 'Lora', Georgia, serif;
       font-style: italic;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       color: #555;
       line-height: 1.7;
-      max-width: 720px;
-      margin-bottom: 20px;
+      max-width: 680px;
+      margin-bottom: 24px;
     }
-
     .matrix-scroll { overflow-x: auto; }
-
     table.matrix {
+      background: #fff;
+      border-radius: 10px;
       width: 100%;
       border-collapse: separate;
       border-spacing: 6px;
       min-width: 680px;
+      padding: 10px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
     }
     table.matrix colgroup col:first-child { width: 92px; }
-
     th.out-header {
       background: #2e2e2e;
-      color: #ffffff;
-      padding: 8px 6px;
-      font-family: 'Source Sans 3', sans-serif;
-      font-variant: small-caps;
-      font-size: 0.76rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      text-align: center;
-      border-radius: 2px;
-    }
-
-    td.in-label {
-      background: var(--phgr-hellgrau);
-      padding: 10px 10px;
-      font-family: 'Source Sans 3', sans-serif;
+      color: #fff;
+      padding: 9px 6px;
       font-variant: small-caps;
       font-size: 0.78rem;
       font-weight: 600;
       letter-spacing: 0.3px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    td.in-label {
+      background: var(--phgr-hellgrau);
+      padding: 10px 12px;
+      font-variant: small-caps;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
       color: #333;
-      border-radius: 2px;
+      border-radius: 5px;
       white-space: nowrap;
       vertical-align: middle;
     }
-
     td.cell {
-      padding: 8px 9px;
-      border-radius: 2px;
-      font-size: 0.73rem;
+      padding: 9px 10px;
+      border-radius: 5px;
+      font-size: 0.79rem;
       line-height: 1.55;
       vertical-align: top;
       color: #333;
     }
-    td.cell.empty {
-      background: #f5f5f5;
-      color: var(--phgr-mittelgrau);
-      font-size: 0.68rem;
-    }
+    td.cell.empty { background: #f2f2f0; color: var(--phgr-mittelgrau); font-size: 0.72rem; }
     td.cell.star-cell { font-weight: 600; }
-
     .matrix-legend {
-      margin-top: 12px;
+      margin-top: 14px;
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       color: var(--phgr-dunkelgrau);
+    }
+
+    /* ── Überraschungen ── */
+    .surprises-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .surprise-card {
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #e4e4e2;
+      border-left: 5px solid var(--card-color, #c7d200);
+      padding: 22px 22px 18px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    }
+    .s-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--card-color, #555);
+      margin-bottom: 7px;
+    }
+    .s-why {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 0.86rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 13px;
+    }
+    .s-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .s-tag {
+      font-size: 0.77rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: var(--chip-bg, #ececec);
+      color: var(--chip-text, #555);
+      font-weight: 600;
     }
 
     /* ── Footer ── */
     footer {
-      border-top: 1px solid var(--phgr-hellgrau);
-      padding: 12px 32px;
+      background: #fff;
+      border-top: 1px solid #e0e0de;
+      padding: 12px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 0.75rem;
       color: var(--phgr-dunkelgrau);
-      flex-shrink: 0;
       flex-wrap: wrap;
       gap: 6px;
     }
     footer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 
-    /* ── Responsive ── */
-    @media (max-width: 580px) {
-      header { padding: 16px 18px; gap: 14px; }
-      .tab-nav { padding: 0 18px; }
-      .tab-btn { padding: 11px 14px; font-size: 0.85rem; }
-      main { padding: 20px 18px 36px; }
-      footer { padding: 12px 18px; flex-direction: column; text-align: center; }
+    @media (max-width: 600px) {
+      header { padding: 16px 20px; }
+      .tab-nav-wrapper { padding: 14px 20px; }
+      main { padding: 24px 20px 40px; }
+      footer { padding: 12px 20px; flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
 
   <div class="gelb-bar"></div>
-
   <header>
-    <div class="phgr-logo">
-      <span class="ph">ph</span><span class="gr">gr</span>
-    </div>
+    <div class="phgr-logo"><span class="ph">ph</span><span class="gr">gr</span></div>
     <div class="header-text">
       <h1>Was kann KI?</h1>
       <p class="subtitle">Überblick für Einsteiger·innen – Tätigkeiten &amp; Medienmodalitäten</p>
     </div>
   </header>
+  <div class="gelb-bar-thin"></div>
 
-  <nav class="tab-nav" aria-label="Abschnitte">
+  <div class="tab-nav-wrapper">
     <button id="btn-t" class="tab-btn active" onclick="showTab('t')">Tätigkeiten</button>
     <button id="btn-m" class="tab-btn" onclick="showTab('m')">Modalitäten</button>
-  </nav>
+    <button id="btn-s" class="tab-btn" onclick="showTab('s')">★ Überraschungen</button>
+  </div>
 
   <main>
 
-    <!-- ════════════════ TÄTIGKEITEN ════════════════ -->
-    <div id="panel-t" class="tab-panel active" role="tabpanel">
+    <!-- ══ TÄTIGKEITEN ══ -->
+    <div id="panel-t" class="tab-panel active">
       <div class="cat-grid">
 
-        <!-- Schreiben & Texte -->
         <div class="cat-card" style="--card-color:#23b2c6;--chip-bg:#dff5f8;--chip-text:#1a7a88;--chip-star-bg:#baedf5;">
           <div class="cat-title">Schreiben &amp; Texte</div>
           <span class="chip">Texte neu erstellen</span>
@@ -311,7 +297,6 @@
           <span class="chip star">★ Format wechseln</span>
         </div>
 
-        <!-- Denken & Ideen -->
         <div class="cat-card" style="--card-color:#6169af;--chip-bg:#eaebf5;--chip-text:#454e8a;--chip-star-bg:#cbcde8;">
           <div class="cat-title">Denken &amp; Ideen</div>
           <span class="chip">Brainstormen</span>
@@ -323,7 +308,6 @@
           <span class="chip star">★ Szenarien durchspielen</span>
         </div>
 
-        <!-- Kommunizieren -->
         <div class="cat-card" style="--card-color:#fbb900;--chip-bg:#fff4d0;--chip-text:#7a5800;--chip-star-bg:#ffe799;">
           <div class="cat-title">Kommunizieren</div>
           <span class="chip">E-Mails &amp; Briefe</span>
@@ -334,7 +318,6 @@
           <span class="chip star">★ Behördensprache entschlüsseln</span>
         </div>
 
-        <!-- Wissen & Recherche -->
         <div class="cat-card" style="--card-color:#1e96a8;--chip-bg:#daeff2;--chip-text:#156e7c;--chip-star-bg:#a8dde5;">
           <div class="cat-title">Wissen &amp; Recherche</div>
           <span class="chip">Themen erschließen</span>
@@ -344,7 +327,6 @@
           <span class="chip star">★ Fakten kritisch hinterfragen</span>
         </div>
 
-        <!-- Planen & Organisieren -->
         <div class="cat-card" style="--card-color:#c7d200;--chip-bg:#f2f5c4;--chip-text:#636900;--chip-star-bg:#dfe396;">
           <div class="cat-title">Planen &amp; Organisieren</div>
           <span class="chip">Aufgaben &amp; Checklisten</span>
@@ -353,7 +335,6 @@
           <span class="chip star">★ Zeitplan entwickeln</span>
         </div>
 
-        <!-- Üben & Simulieren -->
         <div class="cat-card" style="--card-color:#ed6a69;--chip-bg:#fce8e8;--chip-text:#a83030;--chip-star-bg:#f9bfbf;">
           <div class="cat-title">Üben &amp; Simulieren</div>
           <span class="chip star">★ Rollenspiele führen</span>
@@ -362,7 +343,6 @@
           <span class="chip star">★ Gespräche analysieren</span>
         </div>
 
-        <!-- Kreatives -->
         <div class="cat-card" style="--card-color:#e8860a;--chip-bg:#fef2d8;--chip-text:#7a4800;--chip-star-bg:#fcd88c;">
           <div class="cat-title">Kreatives</div>
           <span class="chip">Geschichten &amp; Gedichte</span>
@@ -371,8 +351,7 @@
           <span class="chip star">★ Bilder &amp; Illustrationen</span>
         </div>
 
-        <!-- Reflexion & Alltag -->
-        <div class="cat-card" style="--card-color:#878787;--chip-bg:#efefef;--chip-text:#444444;--chip-star-bg:#d8d8d8;">
+        <div class="cat-card" style="--card-color:#878787;--chip-bg:#efefef;--chip-text:#444;--chip-star-bg:#d8d8d8;">
           <div class="cat-title">Reflexion &amp; Alltag</div>
           <span class="chip star">★ Gedanken sortieren &amp; strukturieren</span>
           <span class="chip star">★ Feedback auf eigene Arbeit</span>
@@ -381,18 +360,15 @@
         </div>
 
       </div>
-      <p class="taetigkeiten-legend">★ = auf den ersten Blick nicht intuitiv</p>
+      <p class="panel-legend">★ = auf den ersten Blick nicht intuitiv</p>
     </div>
 
-    <!-- ════════════════ MODALITÄTEN ════════════════ -->
-    <div id="panel-m" class="tab-panel" role="tabpanel">
-      <p class="matrix-intro">KI übersetzt heute zwischen fast allen Medienformaten – nicht nur Text zu Text. Was kommt rein, was kommt raus?</p>
+    <!-- ══ MODALITÄTEN ══ -->
+    <div id="panel-m" class="tab-panel">
+      <p class="panel-intro">KI übersetzt heute zwischen fast allen Medienformaten – nicht nur Text zu Text. Was kommt rein, was kommt raus?</p>
       <div class="matrix-scroll">
-        <table class="matrix" aria-label="KI-Modalitätenmatrix: Input- vs. Output-Format">
-          <colgroup>
-            <col style="width:92px">
-            <col><col><col><col><col><col>
-          </colgroup>
+        <table class="matrix" aria-label="KI-Modalitätenmatrix">
+          <colgroup><col style="width:92px"><col><col><col><col><col><col></colgroup>
           <thead>
             <tr>
               <td></td>
@@ -455,7 +431,95 @@
       </div>
       <div class="matrix-legend">
         <span>★ = besonders überraschend</span>
-        <span style="opacity:0.7;">Leere Zellen = aktuell keine verbreitete KI-Lösung verfügbar</span>
+        <span style="opacity:0.7;">Leere Zellen = aktuell keine verbreitete KI-Lösung</span>
+      </div>
+    </div>
+
+    <!-- ══ ÜBERRASCHUNGEN ══ -->
+    <div id="panel-s" class="tab-panel">
+      <p class="panel-intro">Diese Anwendungen überraschen die meisten Menschen – weil KI weit mehr ist als ein Schreibassistent.</p>
+      <div class="surprises-grid">
+
+        <div class="surprise-card" style="--card-color:#ed6a69;--chip-bg:#fce8e8;--chip-text:#a83030;">
+          <div class="s-title">KI als Trainingspartner</div>
+          <div class="s-why">Die meisten denken an KI als Schreib-Tool. Dabei ist sie als Trainingspartnerin für schwierige Gespräche besonders wertvoll – auf Abruf, ohne Bewertung.</div>
+          <div class="s-tags">
+            <span class="s-tag">Bewerbungsgespräch üben</span>
+            <span class="s-tag">Kundengespräch simulieren</span>
+            <span class="s-tag">Reklamation trainieren</span>
+          </div>
+        </div>
+
+        <div class="surprise-card" style="--card-color:#6169af;--chip-bg:#eaebf5;--chip-text:#454e8a;">
+          <div class="s-title">KI als Gegner</div>
+          <div class="s-why">KI kann auf Befehl jede beliebige Position einnehmen – ideal, um eigene Argumente auf Herz und Nieren zu testen, bevor es darauf ankommt.</div>
+          <div class="s-tags">
+            <span class="s-tag">Gegenargumente generieren</span>
+            <span class="s-tag">Rolle des Kritikers</span>
+            <span class="s-tag">Advocatus Diaboli</span>
+          </div>
+        </div>
+
+        <div class="surprise-card" style="--card-color:#23b2c6;--chip-bg:#dff5f8;--chip-text:#1a7a88;">
+          <div class="s-title">Format frei wählen</div>
+          <div class="s-why">Derselbe Inhalt – in zehn verschiedenen Formaten. Fließtext, Stichpunkte, Tabelle, E-Mail, Tweet: KI übersetzt auf Knopfdruck, ohne den Inhalt zu verändern.</div>
+          <div class="s-tags">
+            <span class="s-tag">Fließtext → Stichpunkte</span>
+            <span class="s-tag">Protokoll → Tabelle</span>
+            <span class="s-tag">Notizen → E-Mail</span>
+          </div>
+        </div>
+
+        <div class="surprise-card" style="--card-color:#1e96a8;--chip-bg:#daeff2;--chip-text:#156e7c;">
+          <div class="s-title">Erklärniveau wählen</div>
+          <div class="s-why">Kein Buch fragt: «Für wen soll ich das erklären?» KI passt das Niveau auf Knopfdruck an – von Kindergarten bis Fachpublikum, in Sekunden.</div>
+          <div class="s-tags">
+            <span class="s-tag">Für ein Kind erklären</span>
+            <span class="s-tag">Für Laien vereinfachen</span>
+            <span class="s-tag">Fachlich vertiefen</span>
+          </div>
+        </div>
+
+        <div class="surprise-card" style="--card-color:#fbb900;--chip-bg:#fff4d0;--chip-text:#7a5800;">
+          <div class="s-title">Behördensprache entschlüsseln</div>
+          <div class="s-why">Unlesbare Paragraphen, verklausulierte AGBs, Steuerbescheide – KI übersetzt sie in verständliches Alltagsdeutsch. Kostenlos, sofort, ohne Termin.</div>
+          <div class="s-tags">
+            <span class="s-tag">Mietvertrag verstehen</span>
+            <span class="s-tag">Steuerbescheid lesen</span>
+            <span class="s-tag">AGBs zusammenfassen</span>
+          </div>
+        </div>
+
+        <div class="surprise-card" style="--card-color:#878787;--chip-bg:#efefef;--chip-text:#444;">
+          <div class="s-title">KI als Denkpartner</div>
+          <div class="s-why">Nicht nur Fragen stellen, sondern gemeinsam denken. KI hält eigene Gedanken aus, fragt nach, strukturiert – ohne zu werten und ohne zu ermüden.</div>
+          <div class="s-tags">
+            <span class="s-tag">Entscheidung durchdenken</span>
+            <span class="s-tag">Gedanken sortieren</span>
+            <span class="s-tag">Ideen weiterentwickeln</span>
+          </div>
+        </div>
+
+        <div class="surprise-card" style="--card-color:#c7d200;--chip-bg:#f2f5c4;--chip-text:#636900;">
+          <div class="s-title">Audio &amp; Gespräche</div>
+          <div class="s-why">KI transkribiert Meetings, übersetzt Gespräche in Echtzeit und analysiert Tonfall sowie Argumentation – direkt aus Mikrofon oder Aufnahmedatei.</div>
+          <div class="s-tags">
+            <span class="s-tag">Meeting transkribieren</span>
+            <span class="s-tag">Sprache übersetzen</span>
+            <span class="s-tag">Gespräch analysieren</span>
+          </div>
+        </div>
+
+        <div class="surprise-card" style="--card-color:#e8860a;--chip-bg:#fef2d8;--chip-text:#7a4800;">
+          <div class="s-title">Ohne Coding: Apps bauen</div>
+          <div class="s-why">Diese Seite hier wurde mit KI erstellt und auf GitHub gehostet – ohne eine einzige Zeile Code selbst zu schreiben. Das ist heute der neue Normalfall.</div>
+          <div class="s-tags">
+            <span class="s-tag">Webseite erstellen</span>
+            <span class="s-tag">Interaktives Tool bauen</span>
+            <span class="s-tag">Automatisierung einrichten</span>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -469,12 +533,8 @@
 
   <script>
     function showTab(id) {
-      document.querySelectorAll('.tab-panel').forEach(function(p) {
-        p.classList.remove('active');
-      });
-      document.querySelectorAll('.tab-btn').forEach(function(b) {
-        b.classList.remove('active');
-      });
+      document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
       document.getElementById('panel-' + id).classList.add('active');
       document.getElementById('btn-' + id).classList.add('active');
     }

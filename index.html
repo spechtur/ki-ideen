@@ -1,0 +1,198 @@
+
+<h2 class="sr-only">Was kann KI? – Überblick Tätigkeiten und Modalitäten für Einsteiger:innen</h2>
+<style>
+.chip{font-size:11px;padding:3px 8px;border-radius:4px;display:block;line-height:1.5;margin:2px 0;}
+.mth{padding:7px 5px;font-size:11px;font-weight:500;color:var(--color-text-secondary);text-align:center;background:var(--color-background-secondary);border-radius:4px;vertical-align:middle;}
+.mtl{padding:8px 10px;font-size:11px;font-weight:500;color:var(--color-text-primary);background:var(--color-background-secondary);border-radius:4px;vertical-align:middle;white-space:nowrap;}
+.mtc{padding:7px 8px;border-radius:4px;font-size:11px;line-height:1.5;vertical-align:top;color:var(--color-text-primary);}
+.mtce{background:var(--color-background-tertiary);color:var(--color-text-secondary);}
+.tbn{padding:8px 18px;border:none;background:transparent;font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;}
+</style>
+<div style="padding:1rem 0 2rem;">
+<div style="display:flex;border-bottom:0.5px solid var(--color-border-tertiary);margin-bottom:1.5rem;">
+  <button id="bt" class="tbn" onclick="sw('t')" style="color:var(--color-text-primary);border-bottom-color:var(--color-text-primary);">Tätigkeiten</button>
+  <button id="bm" class="tbn" onclick="sw('m')" style="color:var(--color-text-secondary);">Modalitäten</button>
+</div>
+
+<div id="pt">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px;">
+
+<div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:3px solid #D85A30;border-radius:var(--border-radius-lg);padding:13px;">
+  <div style="font-size:12px;font-weight:500;color:#D85A30;margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#D85A30;flex-shrink:0;"></span>Schreiben & Texte</div>
+  <div>
+    <span class="chip" style="background:#FAECE7;color:#712B13;">Texte neu erstellen</span>
+    <span class="chip" style="background:#FAECE7;color:#712B13;">Texte überarbeiten</span>
+    <span class="chip" style="background:#F5C4B3;color:#712B13;font-weight:500;">★ Stil & Ton anpassen</span>
+    <span class="chip" style="background:#FAECE7;color:#712B13;">Kürzen / Zusammenfassen</span>
+    <span class="chip" style="background:#FAECE7;color:#712B13;">Ausbauen / Erweitern</span>
+    <span class="chip" style="background:#FAECE7;color:#712B13;">Übersetzen</span>
+    <span class="chip" style="background:#F5C4B3;color:#712B13;font-weight:500;">★ Sprachniveau anpassen</span>
+    <span class="chip" style="background:#F5C4B3;color:#712B13;font-weight:500;">★ Format wechseln</span>
+  </div>
+</div>
+
+<div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:3px solid #0F6E56;border-radius:var(--border-radius-lg);padding:13px;">
+  <div style="font-size:12px;font-weight:500;color:#0F6E56;margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#0F6E56;flex-shrink:0;"></span>Denken & Ideen</div>
+  <div>
+    <span class="chip" style="background:#E1F5EE;color:#085041;">Brainstormen</span>
+    <span class="chip" style="background:#E1F5EE;color:#085041;">Ideen strukturieren</span>
+    <span class="chip" style="background:#E1F5EE;color:#085041;">Pro/Contra abwägen</span>
+    <span class="chip" style="background:#9FE1CB;color:#085041;font-weight:500;">★ Gegenargumente finden</span>
+    <span class="chip" style="background:#9FE1CB;color:#085041;font-weight:500;">★ Perspektivwechsel</span>
+    <span class="chip" style="background:#9FE1CB;color:#085041;font-weight:500;">★ Entscheidungen durchdenken</span>
+    <span class="chip" style="background:#9FE1CB;color:#085041;font-weight:500;">★ Szenarien durchspielen</span>
+  </div>
+</div>
+
+<div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:3px solid #BA7517;border-radius:var(--border-radius-lg);padding:13px;">
+  <div style="font-size:12px;font-weight:500;color:#BA7517;margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#BA7517;flex-shrink:0;"></span>Kommunizieren</div>
+  <div>
+    <span class="chip" style="background:#FAEEDA;color:#633806;">E-Mails & Briefe</span>
+    <span class="chip" style="background:#FAEEDA;color:#633806;">Präsentationen strukturieren</span>
+    <span class="chip" style="background:#FAC775;color:#633806;font-weight:500;">★ Schwierige Gespräche vorbereiten</span>
+    <span class="chip" style="background:#FAC775;color:#633806;font-weight:500;">★ Feedback sachlich formulieren</span>
+    <span class="chip" style="background:#FAC775;color:#633806;font-weight:500;">★ Botschaft für Zielgruppe anpassen</span>
+    <span class="chip" style="background:#FAC775;color:#633806;font-weight:500;">★ Behördensprache entschlüsseln</span>
+  </div>
+</div>
+
+<div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:3px solid #185FA5;border-radius:var(--border-radius-lg);padding:13px;">
+  <div style="font-size:12px;font-weight:500;color:#185FA5;margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#185FA5;flex-shrink:0;"></span>Wissen & Recherche</div>
+  <div>
+    <span class="chip" style="background:#E6F1FB;color:#0C447C;">Themen erschließen</span>
+    <span class="chip" style="background:#E6F1FB;color:#0C447C;">Texte zusammenfassen</span>
+    <span class="chip" style="background:#E6F1FB;color:#0C447C;">Fachbegriffe erklären</span>
+    <span class="chip" style="background:#B5D4F4;color:#0C447C;font-weight:500;">★ Erklärniveau selbst wählen</span>
+    <span class="chip" style="background:#B5D4F4;color:#0C447C;font-weight:500;">★ Fakten kritisch hinterfragen</span>
+  </div>
+</div>
+
+<div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:3px solid #3B6D11;border-radius:var(--border-radius-lg);padding:13px;">
+  <div style="font-size:12px;font-weight:500;color:#3B6D11;margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#3B6D11;flex-shrink:0;"></span>Planen & Organisieren</div>
+  <div>
+    <span class="chip" style="background:#EAF3DE;color:#27500A;">Aufgaben & Checklisten</span>
+    <span class="chip" style="background:#EAF3DE;color:#27500A;">Projekte strukturieren</span>
+    <span class="chip" style="background:#C0DD97;color:#27500A;font-weight:500;">★ Vorlagen erstellen</span>
+    <span class="chip" style="background:#C0DD97;color:#27500A;font-weight:500;">★ Zeitplan entwickeln</span>
+  </div>
+</div>
+
+<div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:3px solid #534AB7;border-radius:var(--border-radius-lg);padding:13px;">
+  <div style="font-size:12px;font-weight:500;color:#534AB7;margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#534AB7;flex-shrink:0;"></span>Üben & Simulieren</div>
+  <div>
+    <span class="chip" style="background:#CECBF6;color:#3C3489;font-weight:500;">★ Rollenspiele führen</span>
+    <span class="chip" style="background:#CECBF6;color:#3C3489;font-weight:500;">★ Sparringspartner sein</span>
+    <span class="chip" style="background:#CECBF6;color:#3C3489;font-weight:500;">★ Quizfragen & Selbsttests</span>
+    <span class="chip" style="background:#CECBF6;color:#3C3489;font-weight:500;">★ Gespräche analysieren</span>
+  </div>
+</div>
+
+<div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:3px solid #993556;border-radius:var(--border-radius-lg);padding:13px;">
+  <div style="font-size:12px;font-weight:500;color:#993556;margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#993556;flex-shrink:0;"></span>Kreatives</div>
+  <div>
+    <span class="chip" style="background:#FBEAF0;color:#72243E;">Geschichten & Gedichte</span>
+    <span class="chip" style="background:#FBEAF0;color:#72243E;">Ideen für Geschenke & Events</span>
+    <span class="chip" style="background:#F4C0D1;color:#72243E;font-weight:500;">★ Slogans, Headlines, Namen</span>
+    <span class="chip" style="background:#F4C0D1;color:#72243E;font-weight:500;">★ Bilder & Illustrationen</span>
+  </div>
+</div>
+
+<div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:3px solid #888780;border-radius:var(--border-radius-lg);padding:13px;">
+  <div style="font-size:12px;font-weight:500;color:#5F5E5A;margin-bottom:8px;display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#888780;flex-shrink:0;"></span>Reflexion & Alltag</div>
+  <div>
+    <span class="chip" style="background:#D3D1C7;color:#2C2C2A;font-weight:500;">★ Gedanken sortieren</span>
+    <span class="chip" style="background:#D3D1C7;color:#2C2C2A;font-weight:500;">★ Feedback auf eigene Arbeit</span>
+    <span class="chip" style="background:#D3D1C7;color:#2C2C2A;font-weight:500;">★ Alltagsprobleme lösen</span>
+    <span class="chip" style="background:#D3D1C7;color:#2C2C2A;font-weight:500;">★ Als Denkpartner nutzen</span>
+  </div>
+</div>
+
+</div>
+<div style="margin-top:12px;font-size:11px;color:var(--color-text-secondary);">★ = nicht auf den ersten Blick intuitiv</div>
+</div>
+
+<div id="pm">
+<p style="font-size:13px;color:var(--color-text-secondary);margin-bottom:14px;line-height:1.6;">KI übersetzt heute zwischen fast allen Medienformaten. Welches Format kommt rein – welches geht raus?</p>
+<div style="overflow-x:auto;">
+<table style="width:100%;border-collapse:separate;border-spacing:5px;table-layout:fixed;">
+<colgroup><col style="width:88px"><col><col><col><col><col><col></colgroup>
+<thead>
+<tr>
+  <td style="padding:3px;"></td>
+  <th class="mth">→ Text</th>
+  <th class="mth">→ Bild</th>
+  <th class="mth">→ Audio</th>
+  <th class="mth">→ Video</th>
+  <th class="mth">→ Dokument</th>
+  <th class="mth">→ Code / App</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class="mtl">Text →</td>
+  <td class="mtc" style="background:#FAECE7;">Übersetzen<br>Zusammenfassen<br>Stil ändern<br>Umformulieren</td>
+  <td class="mtc" style="background:#E1F5EE;">Bilder generieren<br>Diagramme<br>Illustrationen</td>
+  <td class="mtc" style="background:#FAEEDA;">Vorlesen (TTS)<br>Podcast vertonen</td>
+  <td class="mtc" style="background:#EEEDFE;">Erklärvideos<br>Avatar-Videos</td>
+  <td class="mtc" style="background:#E6F1FB;">Word, PPT, Excel<br>PDF erstellen</td>
+  <td class="mtc" style="background:#EAF3DE;">HTML, CSS<br>Apps bauen<br>Automatisieren</td>
+</tr>
+<tr>
+  <td class="mtl">Audio →</td>
+  <td class="mtc" style="background:#FAECE7;">Transkription<br>Protokoll</td>
+  <td class="mtce mtc"></td>
+  <td class="mtc" style="background:#CECBF6;color:#26215C;font-weight:500;">★ Gespräche simulieren<br>Echtzeit-Übersetzen<br>Gesprächsanalyse</td>
+  <td class="mtce mtc" style="font-size:10px;padding:8px;">Lip-Sync (selten)</td>
+  <td class="mtce mtc" style="font-size:10px;padding:8px;">Via Transkription</td>
+  <td class="mtce mtc"></td>
+</tr>
+<tr>
+  <td class="mtl">Bild →</td>
+  <td class="mtc" style="background:#FAECE7;">Beschreiben<br>OCR<br>Analysieren</td>
+  <td class="mtc" style="background:#9FE1CB;color:#04342C;">Stile übertragen<br>Bildbearbeitung</td>
+  <td class="mtce mtc"></td>
+  <td class="mtce mtc"></td>
+  <td class="mtce mtc" style="font-size:10px;padding:8px;">In Bericht einbetten</td>
+  <td class="mtc" style="background:#C0DD97;color:#173404;font-weight:500;">★ Screenshot → HTML</td>
+</tr>
+<tr>
+  <td class="mtl">Dokument →</td>
+  <td class="mtc" style="background:#FAECE7;">Zusammenfassen<br>Fakten extrahieren</td>
+  <td class="mtce mtc"></td>
+  <td class="mtc" style="background:#FAEEDA;">Text vorlesen<br>(TTS)</td>
+  <td class="mtce mtc"></td>
+  <td class="mtc" style="background:#B5D4F4;color:#042C53;">Übersetzen<br>Umformatieren</td>
+  <td class="mtce mtc"></td>
+</tr>
+<tr>
+  <td class="mtl">Daten →</td>
+  <td class="mtc" style="background:#FAECE7;">Auswertung erklären<br>Interpretieren</td>
+  <td class="mtc" style="background:#E1F5EE;">Charts &<br>Diagramme</td>
+  <td class="mtce mtc"></td>
+  <td class="mtce mtc"></td>
+  <td class="mtc" style="background:#E6F1FB;color:#042C53;">Reports<br>Berichte</td>
+  <td class="mtc" style="background:#EAF3DE;color:#173404;">Formeln<br>Scripts</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="margin-top:10px;font-size:11px;color:var(--color-text-secondary);display:flex;gap:18px;flex-wrap:wrap;">
+  <span>★ = besonders überraschend</span>
+  <span style="opacity:0.6;">Leere Zellen = aktuell keine verbreitete KI-Lösung</span>
+</div>
+</div>
+
+<script>
+function sw(id){
+  var pt=document.getElementById('pt'),pm=document.getElementById('pm');
+  var bt=document.getElementById('bt'),bm=document.getElementById('bm');
+  pt.style.display=id==='t'?'block':'none';
+  pm.style.display=id==='m'?'block':'none';
+  bt.style.color=id==='t'?'var(--color-text-primary)':'var(--color-text-secondary)';
+  bt.style.borderBottomColor=id==='t'?'var(--color-text-primary)':'transparent';
+  bm.style.color=id==='m'?'var(--color-text-primary)':'var(--color-text-secondary)';
+  bm.style.borderBottomColor=id==='m'?'var(--color-text-primary)':'transparent';
+}
+document.getElementById('pm').style.display='none';
+</script>
+</div>
